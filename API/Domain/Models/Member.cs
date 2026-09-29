@@ -1,14 +1,18 @@
+namespace API.Domain;
 public class Member{
     public  Guid Id {get; private set;}
     public string Name { get; private set; }
-     public const int MaxFullNameLength = 150;
+    public const int MaxFullNameLength = 150;
+
+    public List<Tool>? Tools { get; private set; }
 
     
 
-    public Member(Guid Id, string Name ){
+    public Member(Guid Id, string Name,List<Tool>? Tools ){
 
         this.Id = Id;
         this.Name= Name;
+        this.Tools = Tools;
 
     }
 
